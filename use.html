@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Use</title>
+	<style type="text/css">
+	</style>
+</head>
+
+<body>
+</body>
+<script type="text/javascript" src="d3.min.js"></script>
+<script type="text/javascript" src="Diag_web.js"></script>
+<script type="text/javascript">
+//==============ANGREEMENT=================================
+/*
+	options =
+	{
+		itemsColors://диапазон цветов элементов
+		gridColor:
+		signColor://цвет подписей
+		backgroundGrid:
+		background:
+		data://данные в виде массива обьектов
+		dataHeaders://заголовки полей данных
+		container://селектор контейнера
+		width:
+		height:
+		vWidth://вьюбокс ширина
+		vHeight://вьюбокс высота
+		ticks:
+	}
+
+
+*/
+//=========================================================
+
+var data = 
+[
+	[10,20,30,60,20],
+	[20,40,101,50,30]
+];
+var headers = ["a","b","c","d","e"];
+
+var options = {
+	vWidth:500,
+	vHeight:500,
+	width:"500px",
+	height:"500px",
+	padding:50,
+	container:"body",
+	data:data,
+	dataHeaders:headers,
+	gridColor:"#ccc",
+	itemsColors:["rgb(100,150,100)","rgb(250,150,50)"],
+
+	signColor:"#ccc"
+}
+	var a = diagWeb.build(options);
+	a.rebuild(options)
+		
+</script>
+</html>
